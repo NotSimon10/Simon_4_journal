@@ -28,4 +28,37 @@ End:
 
 Begin:
 
+    Go forward 5 cm
+    Go Backwards 2.5 cm
+    Go down 5 cm
+
+End:
+
+Begin:
+
+    Draw up 6 cm
+    Draw forward 4 cm
+    Draw backwards 4 cm
+    Draw down 3 cm
+    Draw forward 3 cm
+    Draw down 3 cm
+    Draw forward 4 cm
+
+End:
+
+Begin:
+
+    Draw up 5 cm
+    Draw forward 3 cm
+    Turn 45 degrees
+    Draw 3 cm
+    Turn 45 degrees
+    Draw 3 cm
+    Turn 45 degrees
+    Draw 3 cm
+    Turn 125 degrees
+    Draw 2 cm
+
+End:
+
     
