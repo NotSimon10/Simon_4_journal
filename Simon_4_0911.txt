@@ -1,0 +1,2 @@
+Pseudocode is fake code written to look like it is real code. It is used to get a certain thing to be made, or in other words happen. We will use it in class for examples and mostly to learn the basics of code, as we are beginners,
+it will probably be mostly used for fun.
