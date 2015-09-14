@@ -1,0 +1,3 @@
+Yesterday what we did is we made a directory and a repository on github. 
+We set up commands in the terminal. This helped us create and edit the files
+that we set up on github!
