@@ -1,0 +1,5 @@
+What is an IDE? What is it good for?
+
+IDE is an acronym for Integrated Drive Electronics. It is a standard
+interface used between a computer motherboard's data paths and the computers
+disk storage devices. It is good for changing things, as in NetBeans.
