@@ -1,0 +1,11 @@
+5 Java Types:
+
+Byte - 8-bit used for saving memory
+
+Int - 32-bit used to represent an unsigned 32-bit integer
+
+Short - 16-bit used to save memory in large arrays
+
+Double - 64-bit is not recommended for currency but for decimals
+
+Float - 32-bit used to save memory in large arrays as well
