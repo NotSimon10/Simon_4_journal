@@ -1,0 +1,7 @@
+It is important to use the naming convention when naming files, because
+they are used as a convention for naming things. You can deduce a file
+and figure out what it is by reading the name. 
+
+The commands for copying in Linux is, Ctrl + Shift + C. That will copy what
+you have selected. To copy the entire directory you would type, 
+Ctrl + Shift + A.
