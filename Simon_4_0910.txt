@@ -2,6 +2,6 @@ What we did with github yesterday was, we programmed files into Github. We used 
 update the file on Github.
 
 Step One: Type Pico (Last Name)_(Period)_(Date).txt
-Step Two: Press "Ctrl X" to exit pico and svae the file.
+Step Two: Press "Ctrl X" to exit pico and save the file.
 Step Three: Type "git add *" to add it to git.
 Step Four: Type in the push command to add it to git.
