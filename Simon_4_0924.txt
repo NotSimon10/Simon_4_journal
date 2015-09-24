@@ -1,0 +1,10 @@
+The reason that Steve Ballmer thought that the General Public License was a "Virus" is
+because of the way the license is written. He says, "if you use any open source software,
+you have to make the rest of your software open source." 
+
+
+The difference between open source and proprietary software is that you can see the code
+for open source.
+
+The difference between GPL and MIT License is that the MIT license doesn't require open
+source whereas the GPL does.
