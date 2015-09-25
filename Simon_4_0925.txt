@@ -15,7 +15,7 @@ to entice potential users to pay for a working version.
 Freemium: A sales strategy, especially on the internet, in which the basic product or 
 service is free, but customers are charged for additional features and content. 
 
-FreeWare:Computer software distributed without charge. 
+FreeWare: Computer software distributed without charge. 
 
 Richard Stallman: He campaigns for software to be distributed in a manner such that
 its users receive the freedoms to use, study, distribute and modify that software. 
