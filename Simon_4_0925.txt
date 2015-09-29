@@ -1,0 +1,26 @@
+Paid License: A license under which all royalties have been paid in advance.
+
+Shareware: Software that is available free of charge and often distributed informally for
+evaluation after which a fee may be requested for continued use.
+
+Trialware: Computer software that can be used free of charge for a limted evaluation
+period.
+
+Ad-ware: Software that displays advertisements and is integrated into another program 
+offered at no charge or at low cost.
+
+Crippleware: Software that has some important functionality deliberitely removed, do as
+to entice potential users to pay for a working version.
+
+Freemium: A sales strategy, especially on the internet, in which the basic product or 
+service is free, but customers are charged for additional features and content. 
+
+FreeWare: Computer software distributed without charge. 
+
+Richard Stallman: He campaigns for software to be distributed in a manner such that
+its users receive the freedoms to use, study, distribute and modify that software. 
+
+Lawrence Lessig: He is a former board member of the Free Software Foundation, and
+Software Freedom Law Center.
+
+Eben Moglen: He started out as a computer programming language designer.
