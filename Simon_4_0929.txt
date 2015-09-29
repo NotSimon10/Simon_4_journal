@@ -1,0 +1,3 @@
+A method (or message) in object-oriented programming (OOP) is a procedure
+associated with an object class. An object is made up of behavior and data.
+
