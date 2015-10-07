@@ -1,0 +1,11 @@
+What is a Java Class?
+
+A class is the blueprint from which individual objects are created.
+
+What might a Java Class be for JavaFX?
+
+An application in the Java class.
+
+What might be a method for a class?
+
+gm.
