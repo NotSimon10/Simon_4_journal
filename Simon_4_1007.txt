@@ -1,0 +1,16 @@
+What are methods?
+
+A method (or message) in object-oriented programming (OOP) is a procedure
+associated with an object class.
+
+What are classes?
+
+A class is the blueprint from which individual objects are created.
+
+What is an instance?
+
+It is when you use a class (or any other type) to allocate space on the stack.
+
+What are class methods?
+
+
