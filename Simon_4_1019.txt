@@ -1,0 +1,9 @@
+I am near completion. I just have to add the feet.
+I was really confused and didn't pay attention well.
+No.
+No, i didn't know it was there.
+gc.setFill(RED)
+gc.fillRect(50,50,10,10)
+gc.fillRect(60,60,10,10)
+gc.fillRect(50,60,10,10)
+
