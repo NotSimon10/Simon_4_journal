@@ -1,0 +1,7 @@
+A method is a object that runs a program.
+
+System
+
+A while loop is a loop that keeps going.
+
+I used them to set up the guesses.
