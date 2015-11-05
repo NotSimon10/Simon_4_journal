@@ -1,0 +1,51 @@
+digraph simple_map {
+A [label="Start"]
+B [label="Leaving The Room"]
+C [label="Dark Hallway"]
+D [label="Flickering Light"]
+E [label="Shimmy Walls"]
+F [label="Turn Around"]
+G [label="Keep Walking"]
+H [label="Open Note"]
+I [label="Leave Note Behind"]
+J [label="Fight"]
+K [label="Run"]
+L [label="Fatal Death"]
+M [label="Find Note"]
+N [label="Man Behind You"]
+O [label="Fall Down"]
+P [label="Take Ladder Back Up"]
+Q [label="Continue on Site"]
+R [label="Hear a Noise"]
+S [label="Hear a Zombie Noise"]
+T [label="Look Through Window"]
+U [label="Ignore and Run"]
+V [label="A Face Flies in Window."]
+W [label="Glass Shatters and You Are Chased."]
+
+A->B [label="commands", fontcolor=darkgreen ]
+B -> C
+B -> D
+B -> E
+C -> M
+M -> I
+M -> H
+D -> R
+R -> F
+R -> G
+F -> N
+N -> J
+N -> K
+E -> O
+O -> P
+O -> Q
+G -> S
+S -> T
+S -> U
+U -> W
+T -> V
+
+
+
+
+}
