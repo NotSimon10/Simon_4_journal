@@ -1,0 +1,5 @@
+A static boolean can ne set to true or false.
+
+whenever its altered.
+
+true or false boolean
