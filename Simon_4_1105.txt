@@ -1,0 +1,9 @@
+a string is traditionally a sequence of characters, either as a literal
+constant or as some kind of variable. 
+
+They are used for user input.
+
+static String username; username = scanner.nextLine();
+
+We can identify Strings by looking in the part of the code that makes some of the functions in the  game work throught the game. 
+
