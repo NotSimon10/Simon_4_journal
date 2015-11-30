@@ -1,0 +1,11 @@
+How successful were you with your game?
+
+I was really successful with my game because I was able to learn how to use a while
+loop, and I was able to do the entire game without any help from the teacher, which
+in retrospect is a huge success.
+
+In what way? Be Specific.
+
+I was able to succeed on this project because I learned how to incorporate many new
+important Java aspects into one whole project. I learned how to use a while loop and
+how to add questions.
