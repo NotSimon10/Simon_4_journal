@@ -1,0 +1,5 @@
+I will create a game with a maze, where you need to dodge enemies and make your
+way to the end of the game.
+
+I dont know how to import many enemies very well or how to import players, more like
+the difficult things.
