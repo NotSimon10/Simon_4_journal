@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="50" height="100" tilewidth="64" tileheight="64" nextobjectid="1">
+ <tileset firstgid="1" name="ntile" tilewidth="64" tileheight="64" tilecount="16">
+  <image source="ntile_2.png" width="256" height="256"/>
+ </tileset>
+ <tileset firstgid="17" name="ntile_2" tilewidth="64" tileheight="64" tilecount="16">
+  <image source="ntile_1.png" width="256" height="256"/>
+  <tile id="0">
+   <properties>
+    <property name="blocked" value="true"/>
+   </properties>
+  </tile>
+  <tile id="1">
+   <properties>
+    <property name="blocked" value="true"/>
+   </properties>
+  </tile>
+  <tile id="4">
+   <properties>
+    <property name="blocked" value="true"/>
+   </properties>
+  </tile>
+  <tile id="5">
+   <properties>
+    <property name="blocked" value="true"/>
+   </properties>
+  </tile>
+ </tileset>
+ <layer name="bottom" width="50" height="100">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA+3RQQrAIAxFwcT7H9p9qQqhYNEZeLhS+JgRkZIkSZIkSZIkScXaoC/e3b3tbd9qez7O2Z2/bKq0+18kSecHAAAAAAAAAAAAAHCrDmRB1kMgTgAA
+  </data>
+ </layer>
+ <layer name="walls" width="50" height="100">
+  <properties>
+   <property name="blocked" value="true"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAA+3VQQrCQAxA0blC739Zl4JU6UwzMaTvQcGFSf10qMcY42hyZYu+Z9eOrOfueXzf17Fjx/nJeLfs2hnxndl7durY9S7617la3f+rI0PnjoiztLIvuuPs85U9K3N3Zj7nn9AR/Y66Mh/RMTt753foON+VfZYqnKtd/wc63vOzHbuuzI6qdNSioxYdteioRUctOmrRUYuOWnTU0qkDAAAAAAAAAAAAAOCpXr9Jsu0gTgAA
+  </data>
+ </layer>
+</map>
