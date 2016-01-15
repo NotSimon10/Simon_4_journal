@@ -67,7 +67,7 @@ class itemwin {
 	public static boolean isvisible = true;
 	Image currentImage;
 	Shape hitbox;
-	Image antidote = new Image("res/antidote.png");
+	Image antidote = new Image("res/portal.png");
 
 	itemwin (int a, int b) throws SlickException {
 		this.x = a;
@@ -158,12 +158,15 @@ public class Unwavering extends BasicGameState {
 	public Poison portal, portal1;
 	public Health health, health1;
 	public itemwin antidote;
+        public Enemy enemy;
 
 	public ArrayList<Poison> portalz = new ArrayList();
 
 	public ArrayList<Health> healthz = new ArrayList();
 	
 	public ArrayList<itemwin> stuffwin = new ArrayList();
+        
+        public ArrayList<Enemy> enemyz = new ArrayList();
 
 	private boolean[][] hostiles;
 
@@ -436,6 +439,9 @@ public class Unwavering extends BasicGameState {
                 portal = new Poison(450, 400);
 		portalz.add(portal1);
 		portalz.add(portal);
+                
+                enemy = new Enemy(100,100);
+                enemyz.add(enemy);
 		
 		health = new Health(100,150);
 		health1 = new Health(450,100);	
@@ -485,6 +491,16 @@ public class Unwavering extends BasicGameState {
 
 			}
 		}
+                
+                for (Enemy n : enemyz) {
+                                if (n.isvisible) {
+                                    
+				n.currentanime.draw(n.Bx, n.By);
+				// draw the hitbox
+				//g.draw(i.hitbox);
+
+			}
+                }
 		
 		
 		for (Health h : healthz) {
@@ -530,9 +546,9 @@ public class Unwavering extends BasicGameState {
 		// there are two types of fixes. A kludge and a hack. This is a kludge.
 
 		if (input.isKeyDown(Input.KEY_UP)) {
-
+                        
 			sprite = up;
-
+                           moveenemies();
 			float fdsc = (float) (fdelta - (SIZE * .15));
 
 			if (!(isBlocked(player.x, player.y - fdelta) || isBlocked(
@@ -549,6 +565,7 @@ public class Unwavering extends BasicGameState {
 		} else if (input.isKeyDown(Input.KEY_DOWN)) {
 
 			sprite = down;
+                        moveenemies();
 
 			if (!isBlocked(player.x, player.y + SIZE + fdelta)
 
@@ -563,6 +580,7 @@ public class Unwavering extends BasicGameState {
 		} else if (input.isKeyDown(Input.KEY_LEFT)) {
 
 			sprite = left;
+                        moveenemies();
 
 			if (!(isBlocked(player.x - fdelta, player.y) || isBlocked(player.x
 
@@ -577,6 +595,7 @@ public class Unwavering extends BasicGameState {
 		} else if (input.isKeyDown(Input.KEY_RIGHT)) {
 
 			sprite = right;
+                        moveenemies();
 
 			// the boolean-kludge-implementation
 
@@ -598,7 +617,26 @@ public class Unwavering extends BasicGameState {
 		player.rect.setLocation(player.getplayershitboxX(),
 				player.getplayershitboxY());
 
-		for (Poison p : portalz) {
+		for (Enemy e : enemyz) {
+
+			if (player.rect.intersects(e.rect)) {
+				//System.out.println("yay");
+				if (e.isvisible) {
+
+					player.health -= 10000;
+                                        e.timeshit+=1;
+                                        if(e.timeshit > 2) {
+                                            
+                                        
+                                      
+					e.isvisible = false;
+				}
+                        }
+                }
+                }
+                
+                        
+                for (Poison p : portalz) {
 
 			if (player.rect.intersects(p.hitbox)) {
 				//System.out.println("yay");
@@ -617,7 +655,7 @@ public class Unwavering extends BasicGameState {
 				//System.out.println("yay");
 				if (h.isvisible) {
 
-					player.health += 1000;
+					player.health += 10000;
 					h.isvisible = false;
 				}
 
@@ -645,6 +683,11 @@ public class Unwavering extends BasicGameState {
 		}
 
 	}
+        public void moveenemies() throws SlickException {
+            for (Enemy n : enemyz) {
+                n.move();
+            }
+        }
 
 	public int getID() {
 
