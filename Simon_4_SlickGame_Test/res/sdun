@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="100" height="100" tilewidth="32" tileheight="32" nextobjectid="1">
+ <tileset firstgid="1" name="floor" tilewidth="64" tileheight="64" tilecount="1">
+  <tile id="0">
+   <image width="64" height="64" source="Tiled_Floor_Texture.png"/>
+  </tile>
+ </tileset>
+ <layer name="walls" width="100" height="100">
+  <properties>
+   <property name="blocked" value="true"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJztwTEBAAAAwqD1T+1lC6AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAbnEAAAQ==
+  </data>
+ </layer>
+ <layer name="floor" width="100" height="100">
+  <data encoding="base64" compression="zlib">
+   eJzt0cEKhDAQRMHO//+0FwUJQjwkjko9KJjD7rKkW5K2y+mmXrr7ah+bvWcje9S8/1H1f8Eu1dLdd9/fTs9v0982eHaD0S6j77F2I29ev8Hsz7J+DwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD+L92dib9NzZ6SJEmSJEmSJEmSJEmSvtEG948d9A==
+  </data>
+ </layer>
+</map>
