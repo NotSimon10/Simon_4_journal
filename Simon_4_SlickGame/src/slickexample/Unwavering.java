@@ -529,18 +529,18 @@ public class Unwavering extends BasicGameState {
 		// System.out.println("Current X: " +player.x + " \n Current Y: "+ y);
         sprite.draw((int) player.x, (int) player.y);
 
-        g.drawString("x: " + (int) player.x + "  y: " + (int) player.y, player.x, player.y - 10);
+        //g.drawString("x: " + (int) player.x + "  y: " + (int) player.y, player.x, player.y - 10);
 
-        g.drawString("Health: " + player.health / 1000, camera.cameraX + 10,
+        g.drawString("Health: " + player.health / 1000, camera.cameraX + 885,
                 camera.cameraY + 10);
 
-        g.drawString("speed: " + (int) (player.speed * 10), camera.cameraX + 10,
+        g.drawString("Swiftness: " + (int) (player.speed * 10), camera.cameraX + 880,
                 camera.cameraY + 25);
 
 		//g.draw(player.rect);
-        g.drawString("time passed: " + counter / 1000, camera.cameraX + 600, camera.cameraY);
+        g.drawString("Time Passed: " + counter / 1000, camera.cameraX , camera.cameraY);
         // moveenemies();
-        g.draw(player.myweapon);
+        //g.draw(player.myweapon);
 
         for (Poison n : portalz) {
             if (n.isvisible) {
