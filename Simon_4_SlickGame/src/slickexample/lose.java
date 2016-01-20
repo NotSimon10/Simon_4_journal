@@ -93,7 +93,7 @@ public class lose extends BasicGameState {
 
 
         //g.drawString("You LOSE!", 450, 200);
-        g.drawString("press 1 to try again", 400, 320);
+        //g.drawString("press 1 to try again", 400, 320);
 
 
        

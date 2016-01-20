@@ -34,7 +34,7 @@ public class Menu extends BasicGameState {
     public void init(GameContainer container, StateBasedGame game)
             throws SlickException {
 
-        startimage = new Image("res/Lorelei.png");
+        startimage = new Image("res/menu.png");
 
         this.game = game;
 
@@ -81,7 +81,7 @@ public class Menu extends BasicGameState {
 
                 break;
 
-            case Input.KEY_F9:
+            case Input.KEY_2:
 
                 game.enterState(5, new FadeOutTransition(Color.black), new FadeInTransition(Color.black));
 

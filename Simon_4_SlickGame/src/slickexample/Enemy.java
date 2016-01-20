@@ -15,6 +15,7 @@ public class Enemy {
 
     int timeshit;
     
+    
     private static int numberOfEnemies = 0;
 
     private int id;
@@ -123,7 +124,7 @@ public class Enemy {
         this.mydirection = Direction.WAIT;
 
 
-        SpriteSheet skeletonSS = new SpriteSheet("res/skeletonwspearsprites.png",
+        SpriteSheet skeletonSS = new SpriteSheet("res/ogresprite.png",
 
                 64, 64, 0);
 
@@ -517,12 +518,9 @@ public class Enemy {
 
         }
 
-    } else {
-            this.currentanime = skdead;}
+    } 
 
     }
-
-    
 
     public float getskX() {
 
