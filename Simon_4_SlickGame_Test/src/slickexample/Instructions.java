@@ -106,7 +106,7 @@ public class Instructions extends BasicGameState {
 // TODO AutoÃ¢â‚¬Âgenerated method stub
 
 
-        return 5;
+        return 4;
 
 
     }

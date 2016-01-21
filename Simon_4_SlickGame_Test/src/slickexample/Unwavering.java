@@ -437,8 +437,8 @@ public class Unwavering extends BasicGameState {
 
                 if ("true".equals(value)) {
 
-                    System.out.println("The tile at x " + xAxis + " andy axis "
-                            + yAxis + " is blocked.");
+//                    System.out.println("The tile at x " + xAxis + " andy axis "
+//                            + yAxis + " is blocked.");
 
                     blocked.blocked[xAxis][yAxis] = true;
 
@@ -613,7 +613,7 @@ public class Unwavering extends BasicGameState {
             player.direction = 1;
             
             sprite = up;
-            //  moveenemies();
+            //moveenemies();
             float fdsc = (float) (fdelta - (SIZE * .15));
 
             if (!(isBlocked(player.x, player.y - fdelta) || isBlocked(
@@ -768,6 +768,8 @@ public class Unwavering extends BasicGameState {
                 if (w.isvisible) {
                     w.isvisible = false;
                     makevisible();
+                    player.x = 42;
+                    player.y = 42;
                     sbg.enterState(5, new FadeOutTransition(Color.black), new FadeInTransition(Color.black));
 
                 }

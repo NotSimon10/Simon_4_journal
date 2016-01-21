@@ -51,11 +51,11 @@ import static slickexample.Unwavering.level;
 
 class blocked2 {
 
-    public static boolean[][] blocked;
+    public static boolean[][] blocked2;
 
-    public static boolean[][] getblocked() {
+    public static boolean[][] getblocked2() {
 
-        return blocked;
+        return blocked2;
 
     }
 
@@ -73,7 +73,7 @@ class iwin {
     iwin(int a, int b) throws SlickException {
         this.x = a;
         this.y = b;
-        this.hitbox = new Rectangle(a, b, 32, 32);// 64 is the width of the item
+        this.hitbox = new Rectangle(a, b, 32, 32);
         this.currentImage = antidote;
 
     }
@@ -160,22 +160,13 @@ class player2 {
 
 public class Level2 extends BasicGameState {
 
-    public Poison portal, portal1;
-    public Health health, health1;
-    public itemwin antidote;
-    public Enemy enemy, enemy1, enemy2, enemy3, enemy4, enemy5, enemy6;
-
-    public ArrayList<Poison> portalz = new ArrayList();
-
-    public ArrayList<Health> healthz = new ArrayList();
-
-    public ArrayList<itemwin> stuffwin = new ArrayList();
-
-    public ArrayList<Enemy> enemyz = new ArrayList();
-
+    //public Health health, health1;
+    
+    //public ArrayList<Health> healthz = new ArrayList();
+    
     private boolean[][] hostiles;
 
-    private static TiledMap grassMap;
+    private static TiledMap grass2Map2;
 
     private static AppGameContainer app;
 
@@ -216,12 +207,12 @@ public class Level2 extends BasicGameState {
 		// *******************
 		// Scenerey Stuff
 		// ****************
-        grassMap = new TiledMap("res/htest3.tmx");
+        grass2Map2 = new TiledMap("res/hmap2.tmx");
 
 		// Ongoing checks are useful
-        System.out.println("Tile map is this wide: " + grassMap.getWidth());
+        System.out.println("Tile map is this wide: " + grass2Map2.getWidth());
 
-        camera = new Camera(gc, grassMap);
+        camera = new Camera(gc, grass2Map2);
 
 		// *********************************************************************************
 		// Player stuff --- these things should probably be chunked into methods
@@ -411,7 +402,7 @@ public class Level2 extends BasicGameState {
 		// *****************************************************************
 		// Obstacles etc.
 		// build a collision map based on tile properties in the TileD map
-        blocked.blocked = new boolean[grassMap.getWidth()][grassMap.getHeight()];
+        blocked2.blocked2 = new boolean[grass2Map2.getWidth()][grass2Map2.getHeight()];
 
 		// System.out.println("Map height:" + grassMap.getHeight());
 		// System.out.println("Map width:" + grassMap.getWidth());
@@ -420,28 +411,28 @@ public class Level2 extends BasicGameState {
 		// You could also use this for planning traps, etc.
 		// System.out.println("Number of tile layers: "
         // +grassMap.getLayerCount());
-        System.out.println("The grassmap is " + grassMap.getWidth() + "by "
-                + grassMap.getHeight());
+        System.out.println("The grassmap is " + grass2Map2.getWidth() + "by "
+                + grass2Map2.getHeight());
 
-        for (int xAxis = 0; xAxis < grassMap.getWidth(); xAxis++) {
+        for (int xAxis = 0; xAxis < grass2Map2.getWidth(); xAxis++) {
 
-            for (int yAxis = 0; yAxis < grassMap.getHeight(); yAxis++) {
+            for (int yAxis = 0; yAxis < grass2Map2.getHeight(); yAxis++) {
 
 				// int tileID = grassMap.getTileId(xAxis, yAxis, 0);
 				// Why was this changed?
 				// It's a Different Layer.
 				// You should read the TMX file. It's xml, i.e.,human-readable
                 // for a reason
-                int tileID = grassMap.getTileId(xAxis, yAxis, 1);
+                int tileID = grass2Map2.getTileId(xAxis, yAxis, 0);
 
-                String value = grassMap.getTileProperty(tileID, "blocked", "false");
+                String value = grass2Map2.getTileProperty(tileID, "blocked", "false");
 
                 if ("true".equals(value)) {
 
                     System.out.println("The tile at x " + xAxis + " andy axis "
-                            + yAxis + " is blocked.");
+                            + yAxis + " is blocked2.");
 
-                    blocked.blocked[xAxis][yAxis] = true;
+                    blocked2.blocked2[xAxis][yAxis] = true;
 
                 }
 
@@ -449,73 +440,32 @@ public class Level2 extends BasicGameState {
 
         }
 
-        System.out.println("Array length" + blocked.blocked[0].length);
+      
+//        for (int xAxis = 0; xAxis < grassMap.getWidth(); xAxis++) {
+//            for (int yAxis = 0; yAxis < grassMap.getHeight(); yAxis++) {
+//                int xBlock = (int) xAxis;
+//                int yBlock = (int) yAxis;
+//                if (!blocked.blocked[xBlock][yBlock]) {
+//                    if (xBlock % 9 == 0 && yBlock % 25 == 0) {
+//                        Health h = new Health(xAxis * SIZE, yAxis * SIZE);
+//                        //	stuff.add(i);
+//                        healthz.add(h);
+//                        hostiles[xAxis][yAxis] = true;
+//                    }
+//                }
+//            }
+//        }
 
-		// A remarkably similar process for finding hostiles
-        hostiles = new boolean[grassMap.getWidth()][grassMap.getHeight()];
+        
+        
 
-        for (int xAxis = 0; xAxis < grassMap.getWidth(); xAxis++) {
-            for (int yAxis = 0; yAxis < grassMap.getHeight(); yAxis++) {
-                int xBlock = (int) xAxis;
-                int yBlock = (int) yAxis;
-                if (!blocked.blocked[xBlock][yBlock]) {
-                    if (yBlock % 7 == 0 && xBlock % 15 == 0) {
-                        Poison i = new Poison(xAxis * SIZE, yAxis * SIZE);
-                        portalz.add(i);
-                        //stuff1.add(h);
-                        hostiles[xAxis][yAxis] = true;
-                    }
-                }
-            }
-        }
+        
 
-        for (int xAxis = 0; xAxis < grassMap.getWidth(); xAxis++) {
-            for (int yAxis = 0; yAxis < grassMap.getHeight(); yAxis++) {
-                int xBlock = (int) xAxis;
-                int yBlock = (int) yAxis;
-                if (!blocked.blocked[xBlock][yBlock]) {
-                    if (xBlock % 9 == 0 && yBlock % 25 == 0) {
-                        Health h = new Health(xAxis * SIZE, yAxis * SIZE);
-                        //	stuff.add(i);
-                        healthz.add(h);
-                        hostiles[xAxis][yAxis] = true;
-                    }
-                }
-            }
-        }
+//        health = new Health(100, 150);
+//        health1 = new Health(450, 100);
+//        healthz.add(health);
+//        healthz.add(health1);
 
-        for (int xAxis = 0; xAxis < grassMap.getWidth(); xAxis++) {
-            for (int yAxis = 0; yAxis < grassMap.getHeight(); yAxis++) {
-                int xBlock = (int) xAxis;
-                int yBlock = (int) yAxis;
-                if (!blocked.blocked[xBlock][yBlock]) {
-                    if (xBlock % 9 == 0 && yBlock % 10 == 0) {
-                        Enemy h = new Enemy(xAxis * SIZE, yAxis * SIZE);
-                        //	stuff.add(i);
-                        enemyz.add(h);
-                        hostiles[xAxis][yAxis] = true;
-                    }
-                }
-            }
-        }
-
-        portal1 = new Poison(100, 100);
-        portal = new Poison(450, 400);
-        portalz.add(portal1);
-        portalz.add(portal);
-
-        //enemy = new Enemy(100, 100);
-        enemy1 = new Enemy(1750, 1048);
-        //enemyz.add(enemy);
-        enemyz.add(enemy1);
-
-        health = new Health(100, 150);
-        health1 = new Health(450, 100);
-        healthz.add(health);
-        healthz.add(health1);
-
-        antidote = new itemwin(3004, 92);
-        stuffwin.add(antidote);
     }
 
     public void render(GameContainer gc, StateBasedGame sbg, Graphics g)
@@ -547,45 +497,14 @@ public class Level2 extends BasicGameState {
         // moveenemies();
         //g.draw(player.myweapon);
 
-        for (Poison n : portalz) {
-            if (n.isvisible) {
-                n.currentImage.draw(n.x, n.y);
-				// draw the hitbox
-                //g.draw(i.hitbox);
-
-            }
-        }
-
-        for (Enemy n : enemyz) {
-            if (n.health < 1) {
-                n.isvisible = false;
-            }
-            if (n.isvisible) {
-
-                n.currentanime.draw(n.Bx, n.By);
-				// draw the hitbox
-                //g.draw(i.hitbox);
-
-            }
-        }
-
-        for (Health h : healthz) {
-            if (h.isvisible) {
-                h.currentImage.draw(h.x, h.y);
-				// draw the hitbox
-                //g.draw(h.hitbox);
-
-            }
-        }
-
-        for (itemwin w : stuffwin) {
-            if (w.isvisible) {
-                w.currentImage.draw(w.x, w.y);
-				// draw the hitbox
-                //g.draw(w.hitbox);
-
-            }
-        }
+//        for (Health h : healthz) {
+//            if (h.isvisible) {
+//                h.currentImage.draw(h.x, h.y);
+//				// draw the hitbox
+//                //g.draw(h.hitbox);
+//
+//            }
+//        }
 
     }
 
@@ -601,7 +520,7 @@ public class Level2 extends BasicGameState {
 
         player.setpdelta(fdelta);
 
-        double rightlimit = (grassMap.getWidth() * SIZE) - (SIZE * 0.75);
+        double rightlimit = (grass2Map2.getWidth() * SIZE) - (SIZE * 0.75);
 
 		// System.out.println("Right limit: " + rightlimit);
         float projectedright = player.x + fdelta + SIZE;
@@ -617,7 +536,7 @@ public class Level2 extends BasicGameState {
             //  moveenemies();
             float fdsc = (float) (fdelta - (SIZE * .15));
 
-            if (!(isBlocked(player.x, player.y - fdelta) || isBlocked(
+            if (!(isBlocked2(player.x, player.y - fdelta) || isBlocked2(
                     (float) (player.x + SIZE + 1.5), player.y - fdelta))) {
 
                 sprite.update(delta);
@@ -634,8 +553,8 @@ public class Level2 extends BasicGameState {
             sprite = down;
             //     moveenemies();
 
-            if (!isBlocked(player.x, player.y + SIZE + fdelta)
-                    || !isBlocked(player.x + SIZE - 1, player.y + SIZE + fdelta)) {
+            if (!isBlocked2(player.x, player.y + SIZE + fdelta)
+                    || !isBlocked2(player.x + SIZE - 1, player.y + SIZE + fdelta)) {
 
                 sprite.update(delta);
 
@@ -650,7 +569,7 @@ public class Level2 extends BasicGameState {
             sprite = left;
             //      moveenemies();
 
-            if (!(isBlocked(player.x - fdelta, player.y) || isBlocked(player.x
+            if (!(isBlocked2(player.x - fdelta, player.y) || isBlocked2(player.x
                     - fdelta, player.y + SIZE - 1))) {
 
                 sprite.update(delta);
@@ -668,8 +587,8 @@ public class Level2 extends BasicGameState {
 
 			// the boolean-kludge-implementation
             if (cangoright
-                    && (!(isBlocked(player.x + SIZE + fdelta,
-                            player.y) || isBlocked(player.x + SIZE + fdelta, player.y
+                    && (!(isBlocked2(player.x + SIZE + fdelta,
+                            player.y) || isBlocked2(player.x + SIZE + fdelta, player.y
                             + SIZE - 1)))) {
 
                 sprite.update(delta);
@@ -702,91 +621,26 @@ public class Level2 extends BasicGameState {
             }
             
             player.myweapon.setLocation(player.x, player.y);
-            for (Enemy e : enemyz) {
-                if (player.myweapon.intersects(e.rect)) {
-                    e.health -= 10;
+            
 
-                }
-            }
+//        for (Health h : healthz) {
+//
+//            if (player.rect.intersects(h.hitbox)) {
+//                //System.out.println("yay");
+//                if (h.isvisible) {
+//
+//                    player.health += 10000;
+//                    h.isvisible = false;
+//                }
+//
+//            }
+//        }
 
-            player.myweapon.setLocation(0, 0);
-        }
-        player.rect.setLocation(player.getplayershitboxX(),
-                player.getplayershitboxY());
-
-        for (Enemy e : enemyz) {
-            if (Math.abs(player.x - e.Bx) < 500) {
-                e.move();
-            }
-        }
-
-        for (Enemy e : enemyz) {
-
-            if (player.rect.intersects(e.rect)) {
-                //System.out.println("yay");
-                if (e.isvisible) {
-
-                    player.health -= 500;
-                    e.timeshit += 1;
-                                        //if(e.timeshit > 2) {
-
-					//e.isvisible = false;
-                    //}
-                }
-            }
-        }
-
-        for (Poison p : portalz) {
-
-            if (player.rect.intersects(p.hitbox)) {
-                //System.out.println("yay");
-                if (p.isvisible) {
-
-                    player.health -= 10000;
-                    p.isvisible = false;
-                }
-
-            }
-        }
-
-        for (Health h : healthz) {
-
-            if (player.rect.intersects(h.hitbox)) {
-                //System.out.println("yay");
-                if (h.isvisible) {
-
-                    player.health += 10000;
-                    h.isvisible = false;
-                }
-
-            }
-        }
-
-        for (itemwin w : stuffwin) {
-
-            if (player.rect.intersects(w.hitbox)) {
-                //System.out.println("yay");
-                if (w.isvisible) {
-                    w.isvisible = false;
-                    makevisible();
-                    sbg.enterState(3, new FadeOutTransition(Color.black), new FadeInTransition(Color.black));
-
-                }
-
-            }
-        }
-
-        //player.health -= counter/1000;
         if (player.health <= 0) {
             makevisible();
             sbg.enterState(2, new FadeOutTransition(Color.black), new FadeInTransition(Color.black));
         }
 
-    }
-
-    public void moveenemies() throws SlickException {
-        for (Enemy n : enemyz) {
-            n.move();
         }
     }
 
@@ -797,24 +651,20 @@ public class Level2 extends BasicGameState {
     }
 
     public void makevisible() {
-        for (Health h : healthz) {
+//        for (Health h : healthz) {
+//
+//            h.isvisible = true;
+         }
 
-            h.isvisible = true;
-        }
+       
 
-        for (Poison i : portalz) {
-
-            i.isvisible = true;
-        }
-    }
-
-    private boolean isBlocked(float tx, float ty) {
+    private boolean isBlocked2(float tx, float ty) {
 
         int xBlock = (int) tx / SIZE;
 
         int yBlock = (int) ty / SIZE;
 
-        return blocked.blocked[xBlock][yBlock];
+        return blocked2.blocked2[xBlock][yBlock];
 
 		// this could make a better kludge
     }
