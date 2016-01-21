@@ -1,4 +1,4 @@
-package slickexample;
+ package slickexample;
 
 import org.newdawn.slick.state.*;
 
@@ -160,9 +160,9 @@ class player2 {
 
 public class Level2 extends BasicGameState {
 
-    public Enemy enemy;
+    public Enemy2 enemy;
     
-    public ArrayList<Enemy> enemyz = new ArrayList();
+    public ArrayList<Enemy2> enemyz = new ArrayList();
     
     private boolean[][] hostiles;
 
@@ -440,28 +440,31 @@ public class Level2 extends BasicGameState {
 
         }
 
-      
-//        for (int xAxis = 0; xAxis < grassMap.getWidth(); xAxis++) {
-//            for (int yAxis = 0; yAxis < grassMap.getHeight(); yAxis++) {
+
+//        
+//      for (int xAxis = 0; xAxis < grass2Map2.getWidth(); xAxis++) {
+//            for (int yAxis = 0; yAxis < grass2Map2.getHeight(); yAxis++) {
 //                int xBlock = (int) xAxis;
 //                int yBlock = (int) yAxis;
 //                if (!blocked.blocked[xBlock][yBlock]) {
 //                    if (xBlock % 9 == 0 && yBlock % 25 == 0) {
-//                        Health h = new Health(xAxis * SIZE, yAxis * SIZE);
+//                        Enemy h = new Enemy(xAxis * SIZE, yAxis * SIZE);
 //                        //	stuff.add(i);
-//                        healthz.add(h);
+//                        enemyz.add(h);
 //                        hostiles[xAxis][yAxis] = true;
 //                    }
 //                }
 //            }
 //        }
-
+      
         
         
 
         
-          enemy = new Enemy(100,100);
+          enemy = new Enemy2(100,100);
           enemyz.add(enemy);
+          
+          
         
 //        health = new Health(100, 150);
 //        health1 = new Health(450, 100);
@@ -499,17 +502,16 @@ public class Level2 extends BasicGameState {
         // moveenemies();
         //g.draw(player.myweapon);
 
-for (Enemy h : enemyz) {
+for (Enemy2 h : enemyz) {
     
-    if(counter % 2 == 0) {
-    
+ 
     if (h.isvisible) {
                 h.currentanime.draw(h.Bx, h.By);
 				
 
 // draw the hitbox
-                //g.draw(h.hitbox);
-    }
+               //g.draw(h.hitbox);
+    
             }
         }
 
@@ -638,8 +640,18 @@ for (Enemy h : enemyz) {
             }
             
             player.myweapon.setLocation(player.x, player.y);
+        }
             
-            for (Enemy h : enemyz) {
+            
+            for (Enemy2 e : enemyz) {
+            if (Math.abs(player.x - e.Bx) < 500) {
+                e.move();
+                
+            
+            
+            }
+            
+            for (Enemy2 h : enemyz) {
 
             if (player.rect.intersects(h.rect)) {
                 if (h.isvisible) {
