@@ -1,0 +1,4 @@
+slickexample.player
+slickexample.Unwavering
+slickexample.blocked
+slickexample.itemwin

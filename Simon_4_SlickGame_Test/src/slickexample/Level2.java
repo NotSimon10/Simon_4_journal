@@ -160,9 +160,9 @@ class player2 {
 
 public class Level2 extends BasicGameState {
 
-    //public Health health, health1;
+    public Enemy enemy;
     
-    //public ArrayList<Health> healthz = new ArrayList();
+    public ArrayList<Enemy> enemyz = new ArrayList();
     
     private boolean[][] hostiles;
 
@@ -460,7 +460,9 @@ public class Level2 extends BasicGameState {
         
 
         
-
+          enemy = new Enemy(100,100);
+          enemyz.add(enemy);
+        
 //        health = new Health(100, 150);
 //        health1 = new Health(450, 100);
 //        healthz.add(health);
@@ -496,6 +498,21 @@ public class Level2 extends BasicGameState {
         g.drawString("Level: " + level, camera.cameraX, camera.cameraY + 15);
         // moveenemies();
         //g.draw(player.myweapon);
+
+for (Enemy h : enemyz) {
+    
+    if(counter % 2 == 0) {
+    
+    if (h.isvisible) {
+                h.currentanime.draw(h.Bx, h.By);
+				
+
+// draw the hitbox
+                //g.draw(h.hitbox);
+    }
+            }
+        }
+
 
 //        for (Health h : healthz) {
 //            if (h.isvisible) {
@@ -622,6 +639,16 @@ public class Level2 extends BasicGameState {
             
             player.myweapon.setLocation(player.x, player.y);
             
+            for (Enemy h : enemyz) {
+
+            if (player.rect.intersects(h.rect)) {
+                if (h.isvisible) {
+                    player.health -= 500;
+                   
+                }
+
+            }
+        }
 
 //        for (Health h : healthz) {
 //

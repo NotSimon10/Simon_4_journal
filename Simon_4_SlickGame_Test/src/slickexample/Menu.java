@@ -89,6 +89,8 @@ public class Menu extends BasicGameState {
                 break;
 
             case Input.KEY_3:
+                
+                game.enterState(5, new FadeOutTransition(Color.black), new FadeInTransition(Color.black));
 
 // TODO: Implement later
                 break;
