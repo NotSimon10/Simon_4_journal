@@ -1,4 +1,4 @@
-package slickexample;
+ package slickexample;
 
 import org.newdawn.slick.state.*;
 
@@ -160,9 +160,9 @@ class player2 {
 
 public class Level2 extends BasicGameState {
 
-    //public Health health, health1;
+    public Enemy2 enemy;
     
-    //public ArrayList<Health> healthz = new ArrayList();
+    public ArrayList<Enemy2> enemyz = new ArrayList();
     
     private boolean[][] hostiles;
 
@@ -440,27 +440,32 @@ public class Level2 extends BasicGameState {
 
         }
 
-      
-//        for (int xAxis = 0; xAxis < grassMap.getWidth(); xAxis++) {
-//            for (int yAxis = 0; yAxis < grassMap.getHeight(); yAxis++) {
+
+//        
+//      for (int xAxis = 0; xAxis < grass2Map2.getWidth(); xAxis++) {
+//            for (int yAxis = 0; yAxis < grass2Map2.getHeight(); yAxis++) {
 //                int xBlock = (int) xAxis;
 //                int yBlock = (int) yAxis;
 //                if (!blocked.blocked[xBlock][yBlock]) {
 //                    if (xBlock % 9 == 0 && yBlock % 25 == 0) {
-//                        Health h = new Health(xAxis * SIZE, yAxis * SIZE);
+//                        Enemy h = new Enemy(xAxis * SIZE, yAxis * SIZE);
 //                        //	stuff.add(i);
-//                        healthz.add(h);
+//                        enemyz.add(h);
 //                        hostiles[xAxis][yAxis] = true;
 //                    }
 //                }
 //            }
 //        }
-
+      
         
         
 
         
-
+          enemy = new Enemy2(100,100);
+          enemyz.add(enemy);
+          
+          
+        
 //        health = new Health(100, 150);
 //        health1 = new Health(450, 100);
 //        healthz.add(health);
@@ -496,6 +501,20 @@ public class Level2 extends BasicGameState {
         g.drawString("Level: " + level, camera.cameraX, camera.cameraY + 15);
         // moveenemies();
         //g.draw(player.myweapon);
+
+for (Enemy2 h : enemyz) {
+    
+ 
+    if (h.isvisible) {
+                h.currentanime.draw(h.Bx, h.By);
+				
+
+// draw the hitbox
+               //g.draw(h.hitbox);
+    
+            }
+        }
+
 
 //        for (Health h : healthz) {
 //            if (h.isvisible) {
@@ -621,7 +640,27 @@ public class Level2 extends BasicGameState {
             }
             
             player.myweapon.setLocation(player.x, player.y);
+        }
             
+            
+            for (Enemy2 e : enemyz) {
+            if (Math.abs(player.x - e.Bx) < 500) {
+                e.move();
+                
+            
+            
+            }
+            
+            for (Enemy2 h : enemyz) {
+
+            if (player.rect.intersects(h.rect)) {
+                if (h.isvisible) {
+                    player.health -= 500;
+                   
+                }
+
+            }
+        }
 
 //        for (Health h : healthz) {
 //
