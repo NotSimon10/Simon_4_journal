@@ -1,0 +1,2 @@
+You can add an image by making an imgae. Then you would import this code:
+startimage = new Image(""); and put the file location inside.
