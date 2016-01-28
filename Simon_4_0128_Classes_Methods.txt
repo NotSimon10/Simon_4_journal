@@ -1,0 +1,10 @@
+What is this?: 
+public void render(GameContainer gc, StateBasedGame sbg, Graphics g) 
+throws SlickException {
+
+This is the render class, this causes the games output to be made so it
+actually looks like a game.
+
+Is it a class or method? How do you know?
+
+It is a class because it is public and can be called anywhere.
