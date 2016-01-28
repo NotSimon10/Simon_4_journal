@@ -7,4 +7,4 @@ actually looks like a game.
 
 Is it a class or method? How do you know?
 
-It is a class because it is public and can be called anywhere.
+It is a method because it is public and can be called anywhere.
