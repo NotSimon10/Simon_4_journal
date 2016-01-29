@@ -1,0 +1,11 @@
+What is a class constructor?
+
+It is a special subroutine called to create an object.
+
+What should be included in a class constructor for orbs? Why?
+
+private and public variables should be included.
+
+What methods should the orb have? why?
+
+It should have a method to call upon it so it can be in the game.
