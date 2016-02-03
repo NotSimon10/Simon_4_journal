@@ -1,0 +1,2 @@
+To make the code easier to read for other viewers. This will also make it more
+likely for them to download your products/games.
