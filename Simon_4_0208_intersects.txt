@@ -1,0 +1,13 @@
+How would one check to see whether weapons damage enemies or objects in Slick?
+
+You could do enemy.health -= 1; and if you had an integer named "health" in the enemy
+class, you could subtract one from the total amount. Then, you would check to see if it 
+had health remaining by doing:
+
+if(enemy.health <= 0) {
+
+e.isvisible = false;
+
+}
+
+That would make it so the enemy is no longer visible/in the game.
