@@ -1,0 +1,11 @@
+How can / will you make the orb move in the direction you are facing?
+
+To make the orb move the way I am facing, I can create an integer called
+"direction" and import that into our game code. We can make it so when they
+press the right key, the integer will equal one, then left equals 2, up equals
+3, down equals 4. Then we can make an if statement:
+if(player.direction == 1) {
+
+
+
+}  
