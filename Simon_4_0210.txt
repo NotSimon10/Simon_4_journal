@@ -1,0 +1,17 @@
+Make a list of ten problems (e.g., FAQs) you have faced when adding orbs
+to your game.
+
+Making the orb and incorporating it into the game was the hardest part, but
+the parts after were not easy.
+
+1. Movement
+2. Hitbox
+3. Making the orb visible.
+orb.setIsVisible(true);
+4. Shooting the orb
+5. Direction of the orb
+6. Making it follow me
+7. Making the orbs/folder
+8. Making it kill enemies
+9. Making the orb disappear
+10. Setting a time limit on the orb
