@@ -1,0 +1,7 @@
+How was an array used in your Slick game?
+
+An array was used in our slick game for our blocked variables and to declare our objects.
+
+What might be another use for an array in a different program?
+
+Another use for an array can be to initialize and declare objects. 
