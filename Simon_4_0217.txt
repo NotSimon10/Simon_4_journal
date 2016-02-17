@@ -1,0 +1,46 @@
+What are arrays used for?
+
+They are used to initialize and declare items.
+
+What is the code for an int array?
+
+It looks like this:
+intArray[0] = 1;
+
+What is the code for an String array?
+
+It looks like this:
+mySecondStringArray[0] = "String 1";
+
+What is the code for an boolean array?
+
+It looks like this:
+arrayBoolean[3] = false;
+
+What is the code for an double array?
+
+double array[][]
+
+How would you change the first value of the int array to 42?
+
+intArray[42] = 42;
+
+Of the String array to "Bob"?
+
+mySecondStringArray[0] = "Bob"
+
+What does this do: private String[] dessert = new String[3];
+
+It makes a string called dessert.
+
+What does this do: private String[] postres = {"rice pudding", "pan dulce", "bunuelos"}
+
+It makes a string array with multiple strings.
+
+How are they different?
+
+One has multiple strings.
+
+How would we replace "bunuelos" with "apple pie"?
+
+Just replace it? I don't know.
