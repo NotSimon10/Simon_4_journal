@@ -1,0 +1,49 @@
+Explain this code:
+public Animation Playeranime, up, down, left, right, sprite, wait;
+    public Player() throws SlickException {
+        SpriteSheet runningSS = new SpriteSheet(
+                "res/ogrespritesheet.png", 64, 64, 0);
+        up = new Animation();
+        up.setAutoUpdate(true);
+        up.addFrame(runningSS.getSprite(0, 8), 330);
+        up.addFrame(runningSS.getSprite(1, 8), 330);
+        up.addFrame(runningSS.getSprite(2, 8), 330);
+        up.addFrame(runningSS.getSprite(3, 8), 330);
+        up.addFrame(runningSS.getSprite(4, 8), 330);
+        up.addFrame(runningSS.getSprite(5, 8), 330);
+        up.addFrame(runningSS.getSprite(6, 8), 330);
+        up.addFrame(runningSS.getSprite(7, 8), 330);
+        up.addFrame(runningSS.getSprite(8, 8), 330);
+
+This code makes an up sprite so when it is called, it makes an animation of
+a player going up.
+
+Why would it be unrealistic / unproductive  to memorize Slick syntax - what
+are the skills we were trying to practice?
+
+Slick, does it for us. So we don't need to.
+
+What is an array?
+
+A series of objects that are the same size and type.
+
+How do you make an array? Give an example.
+
+array[] = "Hello";
+
+What is an ArrayList?
+
+It declares objects.
+
+How do you make an arraylist?
+
+ArrayList<String> list = new ArrayList<String>();
+
+What is the difference between an array and an arraylist?
+
+An arraylist is sixable.
+
+How could we make a health counter for an avatar?
+
+player.health--;
+
