@@ -1,0 +1,20 @@
+Define a class Rat:
+
+public class Rat {
+}
+
+Provide the code to declare and instatiate Rats:
+
+public Rat(int a, int b) {
+}
+
+Explain where the decaration and initialization are placed:
+They are placed inside of the parenthesis of a method where the arguements go.
+
+Provide a two-dimensional array that specifies coordinates for five rats:
+
+Array[0] = 128;
+Array[1] = 122;
+Array[2] = 130;
+Array[3] = 115;
+Array[4] = 503;
