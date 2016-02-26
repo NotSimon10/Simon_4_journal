@@ -1,0 +1,13 @@
+What does the code below do?
+
+The code runs for loops to check if "i" is less than or equal to the map. Then it prints
+the outcome, do to the if statements.
+
+How could you make it print an X? i.e., what array values would you change?
+
+I have no idea how to print the X.
+
+How could you use this to make a 5 in a row game?
+
+You could use this to figure out what spaces have been used.
+
