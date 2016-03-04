@@ -30,6 +30,10 @@ public class Menu extends BasicGameState {
     public Image startimage;
     
     public static Sound sound;
+    
+    public static Sound scream;
+    
+    public static Sound music;
 
     public Menu(int xSize, int ySize) {
 
@@ -41,6 +45,10 @@ public class Menu extends BasicGameState {
         startimage = new Image("res/menu.png");
         
         sound = new Sound("res/lasersound.wav");
+        
+        scream = new Sound("res/scream.wav");
+        
+        music = new Sound("res/music.wav");
 
         this.game = game;
 

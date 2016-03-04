@@ -12,7 +12,7 @@ public class Spikes {
 	public boolean isvisible = true;
 	Image currentImage;
 	Shape hitbox;
-	Image healthpotion = new Image("res/spike-animation.png");
+	Image healthpotion = new Image("res/spikes.png");
 
 	Spikes(int a, int b) throws SlickException {
 		this.x = a;

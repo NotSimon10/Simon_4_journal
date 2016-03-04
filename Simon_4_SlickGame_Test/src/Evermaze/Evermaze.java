@@ -88,7 +88,7 @@ public class Evermaze extends BasicGameState {
     public Spikes spike1;
     public Enemy enemy, enemy1, enemy2, enemy3, enemy4, enemy5, enemy6;
     public Orb orb, orb2, orb3, orb4;
-
+    
     public ArrayList<Poison> portalz = new ArrayList();
     
     public ArrayList<Spikes> spike = new ArrayList();
@@ -242,6 +242,21 @@ public class Evermaze extends BasicGameState {
                 }
             }
         }
+        
+            for (int xAxis = 0; xAxis < grassMap.getWidth(); xAxis++) {
+            for (int yAxis = 0; yAxis < grassMap.getHeight(); yAxis++) {
+                int xBlock = (int) xAxis;
+                int yBlock = (int) yAxis;
+                if (!blocked.blocked[xBlock][yBlock]) {
+                    if (xBlock % 3 == 0 && yBlock % 30 == 0) {
+                        Spikes h = new Spikes(xAxis * SIZE, yAxis * SIZE);
+                        //	stuff.add(i);
+                        spike.add(h);
+                        hostiles[xAxis][yAxis] = true;
+                    }
+                }
+            }
+        }
 
         portal1 = new Poison(100, 100);
         portal = new Poison(450, 400);
@@ -358,6 +373,8 @@ public class Evermaze extends BasicGameState {
     public void update(GameContainer gc, StateBasedGame sbg, int delta)
             throws SlickException {
 
+        Menu.music.play();
+        
         counter += delta;
 
         Input input = gc.getInput();
@@ -515,19 +532,17 @@ public class Evermaze extends BasicGameState {
             }
 
         }
+        
+      
 
         for (Enemy e : enemyz) {
 
             if (player.rect.intersects(e.rect)) {
                 //System.out.println("yay");
                 if (e.isvisible) {
-
                     player.health -= 500;
                     e.timeshit += 1;
-                                        //if(e.timeshit > 2) {
-
-                    //e.isvisible = false;
-                    //}
+                                    
                 }
             }
         }
@@ -537,7 +552,7 @@ public class Evermaze extends BasicGameState {
           if (player.rect.intersects(s.hitbox)) {
                 //System.out.println("yay");
                 if (s.isvisible) {
-
+                    Menu.scream.play();
                     player.health -= 10000;
                     s.isvisible = false;
                 }
@@ -551,7 +566,7 @@ public class Evermaze extends BasicGameState {
             if (player.rect.intersects(p.hitbox)) {
                 //System.out.println("yay");
                 if (p.isvisible) {
-
+                    Menu.scream.play();
                     player.health -= 10000;
                     p.isvisible = false;
                 }
@@ -564,7 +579,7 @@ public class Evermaze extends BasicGameState {
             if (player.rect.intersects(h.hitbox)) {
                 //System.out.println("yay");
                 if (h.isvisible) {
-
+                    
                     player.health += 10000;
                     h.isvisible = false;
                 }
@@ -591,6 +606,7 @@ public class Evermaze extends BasicGameState {
         //player.health -= counter/1000;
         if (player.health <= 0) {
             makevisible();
+            Menu.scream.play();
             sbg.enterState(2, new FadeOutTransition(Color.black), new FadeInTransition(Color.black));
         }
 
