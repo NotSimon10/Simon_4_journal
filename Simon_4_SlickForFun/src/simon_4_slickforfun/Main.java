@@ -23,12 +23,15 @@ public class Main extends StateBasedGame {
         int MaxFPS = 60;
         agc.setTargetFrameRate(MaxFPS);
         agc.setTargetFrameRate(60);  
-        
+    
     }
 
     @Override
     public void initStatesList(GameContainer gc) throws SlickException {
         this.addState(new Menu(xSize, ySize));
+        
+        this.addState(new MainGame(xSize, ySize));
+        
         this.enterState(0);
     }
     
