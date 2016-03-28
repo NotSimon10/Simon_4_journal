@@ -1,0 +1,35 @@
+What differences and similarities have you noticed?
+
+1. Java is object-oriented, while C is function oriented. [Difference]
+2. I noticed that the code commenting is the same. [Similarity]
+3. For loops in Java and in C are the same. [Similarity]
+
+What code adaptations have you made? 
+
+As of now, I have not made any code adaptations to C. Later in the future, I hope to
+acknowledge the glory of C and use it for mechanics.
+
+What is required for a circuit?
+
+For a circuit, (I'm assuming for this question that you are specifying a RedBoard 
+circuit) you need to have a circuit board and a breadboard with all the wires to connect
+it. You need to use the circuit board to supply power to the breadboard. 
+
+How are programs compiled with Arduino?
+
+They are compiled using a highly advanced language called C. C is compiled and added to
+the circuit board to tell the wires what to power and what to do specifically.
+
+Describe the projects you have completed this/last week and what you have learned from 
+them.
+
+The projects that we created last week were circuits. They were made specifically to get
+a certain output. For example, we created LED circuits, they had an LED on the breadboard
+and the wires connected to the circuit board in specific places. Then, we just made
+several different functions for the LED light. In one, we had a potentiometer to adjust
+how often the LED would blink. I later moved on to more advanced work, I got to a game
+called "Simon Says" and four LED's lit up and you would have to press the corresponding
+button. Every time you got it correct, it would add on more rythms/patterns. I have
+learned to first unplug all of the cords before I begin to use a circuit board, and I
+have also learned to deeply focus on what I am working on, because I could possibly use
+this later in life. 
