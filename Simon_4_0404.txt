@@ -1,0 +1,11 @@
+I have made it so a potentiometer can be turned and change the pitch of the piezzo
+buzzer.
+
+I need to configure a bit of the code.
+
+I will be able to turn in my arduino and code. I am going to add one more function to my 
+design. (Not sure what yet.)
+
+I am making new functions.
+
+I have created one to be called to change the pitch.
