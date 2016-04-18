@@ -1,0 +1,19 @@
+For what computational reason did you type elf64?
+
+The elf64 output formats generate ELF64 object files, as used by Linux. Elf provides a 
+default output file-name extension of .o.
+
+Why did you use ld?
+
+Loads one byte indirect with or without displacement from the data space to register.
+
+Why did you not have to use chmod to make a sample executable?
+
+...
+
+Assembly is not quick and easy. It is quick and easy for the computer but not easy for a
+human - being.
+
+...
+
+Low-Level means it is easy for the computer, but not easy for a human.
