@@ -1,0 +1,13 @@
+Describe what similarities you notice between assembly and Human Resource Machine?
+
+The similarities that I see between Human Resource Machine and Assembly are that there 
+are jumps to jump to a certain part of the code. For example, there is a jump called an
+unconditional jump, this is where you can transfer a set of instructions forwards to skip
+certain parts of code, or you can turn it backwards and re-execute the code above. 
+
+Describe what differences you notice between assembly and Human Resource Machine?
+
+The differences that I noticed between Assembly and Human Resource Machine are that there
+are many more ways of jumping in assembly than there were in the game. For example, a
+conditional jump holds many diffent types of jumps as in, Jump Equal or Jump Zero, Jump
+Not Equal or Jump Not Zero, Jump Greater or Jump Not Less/Equal, and many more. 
