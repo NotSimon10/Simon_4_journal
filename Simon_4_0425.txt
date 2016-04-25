@@ -1,0 +1,14 @@
+We wil have an end of the year assessment.
+What are 10 concepts you believe will be covered on the test. Why?
+1. For Loops
+2. If Statements
+3. Booleans
+4. Integers
+5. Doubles
+6. Else
+7. Ask what certain parts of Java code do.
+8. &&, ||, !
+9. While Loops
+10. Objects
+I think these will be on the test because they are key in the basics of Java.
+
