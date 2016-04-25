@@ -1,4 +1,18 @@
-The game that I created has a variation of concepts, you  have to make it
-through a maze while surviving from multiple enemies. Once you reach the end,
-you fight many zombies in a cage and try to survive. 
+Jeremy's Game:
+Playability - His game could be restarted and be played up to as many times as you want.
+It is a catchy game that you can play and navigate through a maze to save yourself before
+time runs out. Points 7/10
+Originality - His game is semi-original, the game we based our code off of was orginally
+a maze, so he just remade that into his own. Points 5/10
+Code Quality - His code is reasonably well done. There is a bit of old comments left in,
+and some classes aren't perfect. Points 7/10
+19/30
 
+Addison's Game:
+Playability - Her game can be played over and over. It was fun to try out and I enjoyed
+watching her playing it. Points 10/10
+Originality - Her game was extremely orignal, she took the fundamentals of the code and
+made it completely her own. Points 10/10
+Code Quality - The quality of her code is awesome. It is perfectly set up and her classes
+are evenly seperated. Points 10/10
+30/30
