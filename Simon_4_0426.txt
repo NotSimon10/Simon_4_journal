@@ -1,0 +1,34 @@
+Write a Java method to return the cubed value of some number.
+
+public int cat(int n) {
+
+return n * n * n;
+
+}
+
+Write an Arduino function to return the cubed value of some number.
+
+void returnnum() {
+
+int num, cube;
+cube = num * num * num
+return cube;
+
+}
+
+Create the class, an object, and class constructor for the class student.
+
+public class Student {
+
+public Student(String studs) {
+
+Student stud = new Student();
+
+}
+
+Describe, if you were to continue with Arduino, what would you create?
+
+If I was to continue with my arduino project, I would first make it a lot bigger. I would
+spend a lot of time fixing the mistakes I made. As soon as I was done with that. I would
+start new project, I would try to make a robot of some sort. Maybe something that can
+draw, or write things down.
