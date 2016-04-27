@@ -1,0 +1,13 @@
+The essence of human / higher level learning is developing the skill to discriminate
+patterns and identify shared characteristics across events (stimuli). Memorization, the
+regurgitation of facts, is considered the lowest level of learning. Why, then, are
+students encouraged to learn computer science?
+
+We are encouraged to learn computer science because it is a extremely enhanced way of
+learning how to teach ourselves things. It teaches us that we need to tinker with things
+and that we need to work on our own to solve our problems.
+
+What should students learn from computer science?
+
+We should learn that we will not always have help, and we won't always have the exact
+answer online to solve our problems, so we need to fix our own problems.
