@@ -16,3 +16,9 @@ made it completely her own. Points 10/10
 Code Quality - The quality of her code is awesome. It is perfectly set up and her classes
 are evenly seperated. Points 10/10
 30/30
+
+Kristine's Game:
+Playability: Her gane was not playable because there was no end. 1/10
+Originality: Her game was not original and it was extremely basic. 1/10
+Code Quality: Her code was very messy and not organized. The classes weren't evenly seperated. 2/10
+5/30
