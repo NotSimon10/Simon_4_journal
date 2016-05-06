@@ -1,0 +1,43 @@
+Given mymap[67][43], Which is the X coordinate? How does this happen?
+43 is the X coordinate, and 67 is the Y coordinate.
+The array is setup so that the y is first and the x is second.
+	
+Write the code from line a and explain what it does.
+
+	if(i == 0) {
+	System.out.print("8888");
+}
+
+This line of code checks to see if the y of the array is equal to zero, and if it is, it
+will print eights along the border.
+
+Write the code from line b and explain what it does.
+
+	System.out.print(map[i][j]);
+
+This line of code will decide to print out either the x or the ".", so if the
+parameters in the if statement for the x above are true, it will print an x. So
+basically, it will print what it is told to print.
+
+Write the code from line c and explain what it does.
+
+	System.out.println(".");
+
+This line of code will print a period and add a line in return for the next bit of
+code.
+
+Write the code from line d and explain what it does.
+
+	System.out.println(map[i][j]);
+This line of code will print the same thing as c, but the only difference is, it will
+skip a line.
+
+Explain how to use a boolean with a while loop. Provide a very specific use case and
+code example.
+
+Explain the use of static.
+The use of static is to see if the use of the variable is shared between all instances.
+
+Provide an example of how you could use an object with your game. Give a code example.
+I could use an object to make a weapon for my player.
+
