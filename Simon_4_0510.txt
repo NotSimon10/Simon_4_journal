@@ -1,0 +1,36 @@
+import java.util.Random;
+
+public class Hero {
+
+public static final Random rand = new Random();
+public static int health = 100;
+public static int score = 0;
+public static boolean weapon = false;
+public static int dexterity = rand.nextInt(100)+1;
+public static int perception = rand.nextInt(100)+1;
+public static int level;
+public static int x, y, z;
+public static String = "@";
+
+public Hero(int x , int y, int symbol){
+	walkcycle = x;
+	camera = y;
+	@ = symbol;
+
+}
+
+}
+
+Provide an example of initializing a hero object with your name.
+
+public class Hero {
+public static int name;
+Scanner Name = new Scanner(System.in);
+System.out.println("What's your name?");
+name = Name.nextInt();
+}
+
+Explain why you would not initialize the hero in class hero?
+
+You would have to constantly call from the class hero instead of just the main.
+
