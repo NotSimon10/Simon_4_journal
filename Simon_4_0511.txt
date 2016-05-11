@@ -1,2 +1,4 @@
 Nested loops are a loop that is inside of another loop. The inner or outer loop can 
-either be a for loop or a while loop.
+either be a for loop or a while loop. The outer loop will run and then run ONLY
+when, the inner loop is done running.
+
