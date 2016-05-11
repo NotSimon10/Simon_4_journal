@@ -1,0 +1,2 @@
+Nested loops are a loop that is inside of another loop. The inner or outer loop can 
+either be a for loop or a while loop.
