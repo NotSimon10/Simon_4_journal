@@ -1,0 +1,13 @@
+I was a student who did not recognize what we were doing and didn't realize we had done
+journals on it before. I just didn't remember ever doing anything like it.
+
+1. How do you create a player object with variables?
+2. Setup a class constructor for Player with variables health and isAlive.
+3. Make a 2D array that plots '.'s on a map.
+4. Make an array for enemies.
+5. Create an object that can be used to move.
+6. How do you map an array?
+7. How do you plot an array's x and y?
+8. How do you add walls to this code?
+9. Why do we make arrays?
+10. What is an array?
