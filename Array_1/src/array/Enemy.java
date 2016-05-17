@@ -3,7 +3,6 @@ package array;
 
 import java.util.Random;
 
-
 public class Enemy {
     
     public static int min = 2;
@@ -15,7 +14,7 @@ public class Enemy {
     public static int enemyY2 = rand.nextInt(max - min + 1) + min;
     public static boolean e1 = true;
     public static boolean e2 = true;
-    
+
     public Enemy(int a, int b, int c, int d) {
         enemyX = a;
         enemyY = b;
