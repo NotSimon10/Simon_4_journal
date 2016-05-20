@@ -1,0 +1,43 @@
+Given the class Ogre:
+
+Provide an example class with class constructor.
+
+public class Ogre {
+
+public static int x, y;
+
+	public Ogre(int a, int b) {
+		this.x = a;
+		this.y = b;
+   }
+
+}
+
+Give an example of instantiation of an Ogre object.
+
+public class Ogreinstat {
+	
+public static Ogre ogre;
+
+	public static void ogre() {
+		ogre = new Ogre(1,1);
+
+}
+
+}
+
+Provide a setter for positioning.
+
+public static void setxX(int x) {
+	Ogre.x = x;
+}
+
+Provide an example of using an ogre's move method.
+if(Ogre.x == 1) {
+	Sytem.out.println("Wow. You suck.");
+	System.exit(0);
+}
+
+Provide an example array of 3 ogres.
+
+char[2] ogre = new char[2];
